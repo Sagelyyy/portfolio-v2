@@ -1,0 +1,12 @@
+.about-me {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  width: 700px;
+  gap: 5px;
+}
+
+.about-text {
+  font-family: var(--small);
+  padding: 1rem;
+}

@@ -1,6 +1,6 @@
 import "../styles/Hero.css";
 
-export function Hero() {
+function Hero() {
   return (
     <div className="hero-wrapper">
       <h1 className="hero-title">Chris Weiskopf</h1>

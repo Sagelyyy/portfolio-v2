@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--darkest);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 section {

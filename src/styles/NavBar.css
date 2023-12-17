@@ -1,0 +1,27 @@
+.navigation {
+  position: sticky;
+  top: 0;
+  padding: 0;
+  backdrop-filter: blur(50px);
+  border-bottom: 3px solid var(--middle);
+  z-index: 999;
+}
+
+.nav-container {
+  width: 100%;
+  font-family: var(--header);
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.nav-link {
+  align-self: center;
+  cursor: pointer;
+}

@@ -1,45 +1,27 @@
 import "./styles/App.css";
-import Card from "./components/Card";
-import Hero from "./components/Hero";
-import { projects } from "./data/projects";
-function App() {
-  const cardItems = projects.map((project, i) =>
-    i % 2 === 0 ? (
-      <Card
-        reversed={false}
-        key={project.id}
-        title={project.title}
-        content={project.description}
-        mobile={"https://dummyimage.com/500x300"}
-        preview={"https://dummyimage.com/200x300"}
-        live={project.live}
-        github={project.repo}
-      />
-    ) : (
-      <Card
-        reversed={true}
-        key={project.id}
-        title={project.title}
-        content={project.description}
-        mobile={"https://dummyimage.com/500x300"}
-        preview={"https://dummyimage.com/200x300"}
-        live={project.live}
-        github={project.repo}
-      />
-    )
-  );
 
+import NavBar from "./components/NavBar";
+import Landing from "./routes/Landing";
+import About from "./routes/About";
+import { Routes, Route } from "react-router-dom";
+import Projects from "./routes/Projects";
+import Resume from "./routes/Resume";
+import Footer from "./components/Footer";
+function App() {
   return (
     <>
-      <section className="hero">
-        <Hero />
-      </section>
-      <section className="project-container col">
-        <h5 className="project-look">
-          Projects<span>.</span>
-        </h5>
-        {cardItems}
-      </section>
+      <div>
+        <section className="navigation">
+          <NavBar />
+        </section>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
+        <Footer />
+      </div>
     </>
   );
 }
