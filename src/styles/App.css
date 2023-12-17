@@ -1,0 +1,21 @@
+.col {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project-look {
+  font-family: var(--sub-header);
+  font-size: 3rem;
+  margin-bottom: 0;
+  color: var(--brighter);
+  font-size: 70px;
+  letter-spacing: 5px;
+  text-decoration: underline;
+}
+
+.project-look > span {
+  color: var(--middle);
+}

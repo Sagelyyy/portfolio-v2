@@ -1,0 +1,26 @@
+.hero {
+  background-color: var(--lighter);
+  min-width: 100vw;
+  min-height: 30rem;
+  padding: 0;
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 5rem;
+  letter-spacing: 0.4rem;
+  font-family: var(--header);
+  margin-bottom: 0;
+}
+
+.hero-subtitle {
+  font-family: var(--sub-header);
+  font-size: 2rem;
+  color: var(--bright);
+}

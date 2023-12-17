@@ -1,0 +1,62 @@
+.card {
+  color: var(--bright);
+  display: flex;
+  transition: all 1s;
+}
+
+.card:nth-child(even) {
+  transform: translateX(-99%);
+  opacity: 0;
+}
+
+.card:nth-child(odd) {
+  transform: translateX(99%);
+  opacity: 0;
+}
+
+.card-info {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  padding: 1rem;
+  gap: 5px;
+}
+
+.card-info > h3 {
+  font-size: 30px;
+  font-family: var(--sub-header);
+  color: var(--brighter);
+}
+
+.card-info > p {
+  font-family: var(--small);
+  color: var(--middle);
+}
+
+.card-images {
+  display: flex;
+  align-self: flex-end;
+  gap: 1em;
+}
+
+.card-images > img {
+  transition: all 0.5s;
+}
+
+.card-images > img:hover {
+  transform: translateY(-25px);
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.row-reverse > .card-images {
+  align-self: flex-start;
+}
+
+.slide-in {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
