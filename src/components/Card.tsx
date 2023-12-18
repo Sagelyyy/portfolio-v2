@@ -28,7 +28,6 @@ function Card({
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        console.log(entry.isIntersecting);
         setInter(entry.isIntersecting);
       },
       { rootMargin: "-25px" }

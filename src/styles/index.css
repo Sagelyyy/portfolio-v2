@@ -9,6 +9,22 @@
   --header: "Roboto", sans-serif;
 }
 
+.light {
+  --darkest: #cdb4db;
+  --lighter: #ffc8dd;
+  --middle: #ffafcc;
+  --bright: #bde0fe;
+  --brighter: #a2d2ff;
+}
+
+.dark {
+  --darkest: #22223b;
+  --lighter: #4a4e69;
+  --middle: #9a8c98;
+  --bright: #c9ada7;
+  --brighter: #f2e9e4;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -32,7 +48,7 @@ a {
   width: fit-content;
   padding: 10px;
   margin: 0 10px;
-  border: 2px solid var(--lighter);
+  border: 2px solid var(--middle);
 }
 
 a:visited {
@@ -41,6 +57,6 @@ a:visited {
 
 a:hover {
   color: var(--brighter);
-  border: 2px solid var(--middle);
+  border: 2px solid var(--brighter);
   transform: translateY(-5px);
 }
