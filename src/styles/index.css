@@ -1,34 +1,39 @@
 :root {
-  --darkest: #22223b;
-  --lighter: #4a4e69;
-  --middle: #9a8c98;
-  --bright: #c9ada7;
-  --brighter: #f2e9e4;
   --sub-header: "Fira Sans", sans-serif;
   --small: "Prompt", sans-serif;
   --header: "Roboto", sans-serif;
 }
 
-.light {
-  --darkest: #cdb4db;
-  --lighter: #ffc8dd;
-  --middle: #ffafcc;
-  --bright: #bde0fe;
-  --brighter: #a2d2ff;
+.dark {
+  --background: #232946;
+  --headline: #fffffe;
+  --paragraph: #b8c1ec;
+  --btn: #eebbc3;
+  --btn-text: #232946;
+  --btn-hvr: #e0dadb;
+  --secondary: #fffffe;
+  --stroke: #121629;
+  --teritiary: #eebbc3;
+  transition: all 0.5s;
 }
 
-.dark {
-  --darkest: #22223b;
-  --lighter: #4a4e69;
-  --middle: #9a8c98;
-  --bright: #c9ada7;
-  --brighter: #f2e9e4;
+.light {
+  --background: #fffffe;
+  --headline: #272343;
+  --paragraph: #2d334a;
+  --btn: #eebbc3;
+  --btn-text: #232946;
+  --btn-hvr: #5c5b5b;
+  --secondary: #e3f6f5;
+  --stroke: #272343;
+  --teritiary: #bae8e8;
+  transition: all 0.5s;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--darkest);
+  background-color: var(--background);
   overflow-x: clip;
 }
 
@@ -36,7 +41,7 @@ section {
   padding: 7em;
   display: flex;
   justify-content: center;
-  color: var(--brighter);
+  color: var(--paragraph);
 }
 
 a {
@@ -48,7 +53,6 @@ a {
   width: fit-content;
   padding: 10px;
   margin: 0 10px;
-  border: 2px solid var(--middle);
 }
 
 a:visited {
@@ -56,7 +60,6 @@ a:visited {
 }
 
 a:hover {
-  color: var(--brighter);
-  border: 2px solid var(--brighter);
+  color: var(--btn-hvr);
   transform: translateY(-5px);
 }

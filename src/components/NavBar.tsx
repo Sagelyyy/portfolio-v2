@@ -3,33 +3,38 @@ import "../styles/NavBar.css";
 import { Link } from "react-router-dom";
 
 export function NavBar() {
-  const [theme, setTheme] = useState<string>();
-  const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)");
-  const currentTheme = localStorage.getItem("theme");
+  const [theme, setTheme] = useState<string>(() => {
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme ? storedTheme : "";
+  });
 
   useEffect(() => {
-    console.log("fire");
-    if (currentTheme == "dark") {
-      document.body.classList.toggle("dark");
-      setTheme(currentTheme);
-    } else if (currentTheme == "light") {
-      document.body.classList.toggle("light");
-      setTheme(currentTheme);
-    }
-  }, [currentTheme, theme]);
-
-  function toggleTheme() {
-    console.log("fired toggle");
-    if (preferredTheme.matches) {
-      document.body.classList.toggle("light");
-      setTheme(document.body.classList.contains("light") ? "light" : "dark");
+    const storedTheme = localStorage.getItem("theme");
+    if (!storedTheme) {
+      const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (preferredTheme.matches) {
+        setTheme("dark");
+      } else {
+        setTheme("light");
+      }
     } else {
-      document.body.classList.toggle("dark-mode");
-      setTheme(
-        document.body.classList.contains("dark-mode") ? "dark" : "light"
-      );
+      setTheme(storedTheme);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === "light") {
+      document.body.classList.add("light");
+      document.body.classList.remove("dark");
+    } else {
+      document.body.classList.add("dark");
+      document.body.classList.remove("light");
     }
     localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  function toggleTheme() {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   }
 
   return (
@@ -48,11 +53,12 @@ export function NavBar() {
           <Link to="/resume">Resume</Link>
         </li>
         <li
+          className="nav-theme"
           onClick={() => {
             toggleTheme();
           }}
         >
-          Light / Dark
+          {theme === "dark" ? "🌑" : "☀️"}
         </li>
       </ul>
     </nav>

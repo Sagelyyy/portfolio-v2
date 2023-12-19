@@ -1,5 +1,5 @@
 .hero {
-  background-color: var(--lighter);
+  background-color: var(--stroke);
   min-width: 100vw;
   min-height: 30rem;
   padding: 0;
@@ -13,6 +13,7 @@
 }
 
 .hero-title {
+  color: var(--teritiary);
   font-size: 5rem;
   letter-spacing: 0.4rem;
   font-family: var(--header);
@@ -22,5 +23,5 @@
 .hero-subtitle {
   font-family: var(--sub-header);
   font-size: 2rem;
-  color: var(--bright);
+  color: var(--secondary);
 }

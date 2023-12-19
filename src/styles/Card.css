@@ -1,5 +1,5 @@
 .card {
-  color: var(--bright);
+  color: var(--headline);
   display: flex;
   transition: all 1s;
 }
@@ -31,7 +31,7 @@
 
 .card-info > p {
   font-family: var(--small);
-  color: var(--middle);
+  color: var(--paragraph);
 }
 
 .card-images {

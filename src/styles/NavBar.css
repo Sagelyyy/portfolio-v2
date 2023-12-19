@@ -3,7 +3,7 @@
   top: 0;
   padding: 0;
   backdrop-filter: blur(10px);
-  border-bottom: 3px solid var(--middle);
+  border-bottom: 3px solid var(--secondary);
   z-index: 999;
 }
 
@@ -15,7 +15,6 @@
 }
 
 .nav-links {
-  text-shadow: 0 0 2px black;
   list-style: none;
   display: flex;
   gap: 10px;
@@ -24,5 +23,11 @@
 }
 .nav-link {
   align-self: center;
+  cursor: pointer;
+}
+
+.nav-theme {
+  padding: 10px;
+  font-size: 2rem;
   cursor: pointer;
 }
