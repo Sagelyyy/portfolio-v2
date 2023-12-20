@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/Card.css";
+import Tag from "./Tag";
 
 interface CardInterface {
   title: string;
@@ -9,6 +10,7 @@ interface CardInterface {
   reversed: boolean;
   github: string;
   live: string;
+  tags: string[];
 }
 
 function Card({
@@ -19,6 +21,7 @@ function Card({
   reversed,
   github,
   live,
+  tags,
 }: CardInterface) {
   type RefType = HTMLDivElement | null;
 
@@ -54,6 +57,9 @@ function Card({
       <div className="card-info">
         <h3>{title}</h3>
         <p>{content}</p>
+        <div className="card-tags">
+          <Tag tagArr={tags} />
+        </div>
         <div className="links">
           <a href={github} target="_blank">
             Github Repo

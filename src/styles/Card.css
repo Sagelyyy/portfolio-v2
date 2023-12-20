@@ -48,6 +48,11 @@
   transform: translateY(-25px);
 }
 
+.card-tags {
+  display: flex;
+  gap: 20px;
+}
+
 .row-reverse {
   flex-direction: row-reverse;
 }

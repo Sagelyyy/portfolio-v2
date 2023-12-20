@@ -1,0 +1,36 @@
+.tag {
+  border: 2px solid black;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: small;
+}
+
+.language-tag {
+  background-color: #ffcc00;
+  color: #2b2200;
+}
+
+.library-framework-tag {
+  background-color: #6699ff;
+  color: #13316b;
+}
+
+.database-tag {
+  background-color: #ff6666;
+  color: #6d0c0c;
+}
+
+.design-tag {
+  background-color: #99cc00;
+  color: #2c360d;
+}
+
+.other-tag {
+  background-color: #ff99ff;
+  color: #5e185e;
+}
+
+.undefined-tag {
+  background-color: #cccccc;
+  color: #0f0f0f;
+}

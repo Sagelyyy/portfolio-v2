@@ -10,6 +10,7 @@ function Landing() {
         key={project.id}
         title={project.title}
         content={project.description}
+        tags={project.tags}
         mobile={"https://dummyimage.com/500x300"}
         preview={"https://dummyimage.com/200x300"}
         live={project.live}
@@ -21,6 +22,7 @@ function Landing() {
         key={project.id}
         title={project.title}
         content={project.description}
+        tags={project.tags}
         mobile={"https://dummyimage.com/500x300"}
         preview={"https://dummyimage.com/200x300"}
         live={project.live}
