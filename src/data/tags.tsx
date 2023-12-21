@@ -12,6 +12,11 @@ export const tags = [
     id: nanoid(),
   },
   {
+    name: "SvelteKit",
+    type: "library/framework",
+    id: nanoid(),
+  },
+  {
     name: "Node.js",
     type: "library/framework",
     id: nanoid(),

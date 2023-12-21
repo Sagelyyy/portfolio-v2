@@ -13,6 +13,17 @@ export const projects = [
     id: nanoid(),
   },
   {
+    title: "Kindness",
+    description: `Kindness is a full-stack web application built as a personal project to 
+    enhance my skills in Postgres, Supabase, and full-stack development. The application 
+    allows users to share positive messages 📝 with each other in real time, fostering a 
+    community of kindness and positivity 💖.`,
+    tags: ["SvelteKit", "Node.js", "Express", "Supabase", "PostgresSQL"],
+    live: "https://do-good.netlify.app/",
+    repo: "https://github.com/Sagelyyy/Kindness-server",
+    id: nanoid(),
+  },
+  {
     title: "HoloScript",
     description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
       recusandae nobis! Animi voluptates voluptatem explicabo, quas 
@@ -23,32 +34,6 @@ export const projects = [
     tags: ["React", "Firebase"],
     live: "https://sagelyyy.github.io/holoscript/",
     repo: "https://github.com/Sagelyyy/holoscript",
-    id: nanoid(),
-  },
-  {
-    title: "Bookshelf",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
-      recusandae nobis! Animi voluptates voluptatem explicabo, quas 
-      repellendus nobis! Aliquid nihil neque aut eius soluta illum sunt, 
-      temporibus qui harum delectus fuga odit a magnam impedit tempora, 
-      excepturi maxime officia tempore molestias eligendi quod, laudantium 
-      at est? Ducimus at magni aliquid!`,
-    tags: ["React", "Firebase"],
-    live: "https://sagelyyy.github.io/react-bookshelf/",
-    repo: "https://github.com/Sagelyyy/react-bookshelf",
-    id: nanoid(),
-  },
-  {
-    title: "Wheres Waldo",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, 
-      recusandae nobis! Animi voluptates voluptatem explicabo, quas 
-      repellendus nobis! Aliquid nihil neque aut eius soluta illum sunt, 
-      temporibus qui harum delectus fuga odit a magnam impedit tempora, 
-      excepturi maxime officia tempore molestias eligendi quod, laudantium 
-      at est? Ducimus at magni aliquid!`,
-    tags: ["React", "Firebase"],
-    live: "https://sagelyyy.github.io/wheres-waldo/",
-    repo: "https://github.com/Sagelyyy/wheres-waldo",
     id: nanoid(),
   },
 ];
