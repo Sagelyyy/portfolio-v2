@@ -3,33 +3,35 @@ import Hero from "../components/Hero";
 import { projects } from "../data/projects";
 
 function Landing() {
-  const cardItems = projects.map((project, i) =>
-    i % 2 === 0 ? (
-      <Card
-        reversed={false}
-        key={project.id}
-        title={project.title}
-        content={project.description}
-        tags={project.tags}
-        mobile={"https://dummyimage.com/500x300"}
-        preview={"https://dummyimage.com/200x300"}
-        live={project.live}
-        github={project.repo}
-      />
-    ) : (
-      <Card
-        reversed={true}
-        key={project.id}
-        title={project.title}
-        content={project.description}
-        tags={project.tags}
-        mobile={"https://dummyimage.com/500x300"}
-        preview={"https://dummyimage.com/200x300"}
-        live={project.live}
-        github={project.repo}
-      />
-    )
-  );
+  const cardItems = projects.map((project, i) => {
+    if (i < 3) {
+      return i % 2 === 0 ? (
+        <Card
+          reversed={false}
+          key={project.id}
+          title={project.title}
+          content={project.description}
+          tags={project.tags}
+          mobile={project.smallImg}
+          preview={project.largeImg}
+          live={project.live}
+          github={project.repo}
+        />
+      ) : (
+        <Card
+          reversed={true}
+          key={project.id}
+          title={project.title}
+          content={project.description}
+          tags={project.tags}
+          mobile={project.smallImg}
+          preview={project.largeImg}
+          live={project.live}
+          github={project.repo}
+        />
+      );
+    }
+  });
   return (
     <>
       <section className="hero">
