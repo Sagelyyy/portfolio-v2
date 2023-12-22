@@ -10,21 +10,19 @@ import Footer from "./components/Footer";
 import Blog from "./routes/Blog";
 function App() {
   return (
-    <>
-      <div>
-        <section className="navigation">
-          <NavBar />
-        </section>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
-        <Footer />
-      </div>
-    </>
+    <div className="app-wrapper">
+      <section className="navigation">
+        <NavBar />
+      </section>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/resume" element={<Resume />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

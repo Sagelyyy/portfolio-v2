@@ -1,7 +1,14 @@
+import { projects } from "../data/projects";
+import Tile from "../components/Tile";
 function Projects() {
   return (
     <section>
-      <div>TODO: Work on projects page</div>
+      <Tile
+        img="https://images.unsplash.com/photo-1682685796186-1bb4a5655653?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="man climing"
+        github="#"
+        live="#"
+      />
     </section>
   );
 }

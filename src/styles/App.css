@@ -19,3 +19,9 @@
 .project-look > span {
   color: var(--stroke);
 }
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
