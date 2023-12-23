@@ -1,5 +1,9 @@
 function Blog() {
-  return <h1>TODO: Work on Blog</h1>;
+  return (
+    <section>
+      <h3>Coming Soon..</h3>
+    </section>
+  );
 }
 
 export default Blog;

@@ -9,4 +9,12 @@
 .about-text {
   font-family: var(--small);
   padding: 1rem;
+  min-width: 500px;
+}
+
+.about-img {
+  max-width: 300px;
+  border-radius: 20px;
+  padding: 10px;
+  object-fit: cover;
 }

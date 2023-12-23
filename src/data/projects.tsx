@@ -22,7 +22,14 @@ export const projects = [
     enhance my skills in Postgres, Supabase, and full-stack development. The application 
     allows users to share positive messages 📝 with each other in real time, fostering a 
     community of kindness and positivity 💖.`,
-    tags: ["SvelteKit", "Node.js", "Express", "Supabase", "PostgresSQL"],
+    tags: [
+      "SvelteKit",
+      "Node.js",
+      "Express",
+      "Supabase",
+      "PostgresSQL",
+      "Netlify",
+    ],
     largeImg: "src/assets/images/kindnessLarge.png",
     largeAlt: "a large image of the website",
     smallImg: "src/assets/images/kindnessSmall.png",
@@ -37,7 +44,7 @@ export const projects = [
     is heavily based off of Twitter. It is written in React, and the backend uses firebase. 
     Its purpose is for learning and displaying the skills I have learned throughout the course. 
     It is the final project in the Javascript course.`,
-    tags: ["React", "Firebase"],
+    tags: ["React", "Firebase", "Responsive Design", "Restful APIs"],
     largeImg: "src/assets/images/holoLarge.png",
     largeAlt: "a large image of the website",
     smallImg: "src/assets/images/holoSmall.png",

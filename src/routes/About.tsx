@@ -4,17 +4,22 @@ function About() {
   return (
     <section>
       <div className="about-me">
-        <p className="about-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, rerum
-          molestiae nobis placeat accusamus temporibus eius dolorum voluptatum
-          eveniet ex tempora reiciendis sapiente voluptate suscipit nostrum in
-          obcaecati natus at! Esse, mollitia dolorem ducimus quidem assumenda,
-          ad aliquid quos nemo a unde neque libero inventore vitae facilis
-          consequatur temporibus praesentium!
-        </p>
+        <div>
+          <p className="about-text">
+            Hello, I'm Chris 👋, a passionate full-stack web developer based in
+            the beautiful landscapes of New Hampshire. With a love for creating
+            captivating digital experiences, I specialize in crafting dynamic
+            and visually stunning websites.
+          </p>
+          <p className="about-text">
+            Beyond coding, I immerse myself in the worlds of gaming 🕹️, capture
+            moments through photography 📷, and seek adventure along hiking
+            trails ⛰️.
+          </p>
+        </div>
         <img
           className="about-img"
-          src="./assets/chris.jpg"
+          src="src/assets/images/chris.jpg"
           alt="The developer Chris Weiskopf smiling at the camera"
         />
       </div>
