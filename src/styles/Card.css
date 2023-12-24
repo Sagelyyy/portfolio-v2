@@ -26,7 +26,7 @@
 .card-info > h3 {
   font-size: 30px;
   font-family: var(--sub-header);
-  color: var(--brighter);
+  color: var(--headline);
 }
 
 .card-info > p {

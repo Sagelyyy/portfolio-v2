@@ -16,7 +16,7 @@ function App() {
       </section>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<Blog />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />

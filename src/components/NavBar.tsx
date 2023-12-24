@@ -44,7 +44,7 @@ export function NavBar() {
           <Link to="/">Home</Link>
         </li>
         <li className="nav-link">
-          <Link to="/blog">Blog</Link>
+          <Link to="/blog/latest">Blog</Link>
         </li>
         <li className="nav-link">
           <Link to="/projects">Projects</Link>

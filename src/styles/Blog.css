@@ -1,9 +1,28 @@
 .blog-container {
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 800px;
   margin: 0 auto;
+  max-width: 800px;
   padding: 1rem 0;
+}
+.blog-nav {
+  position: fixed;
+  left: 0;
+  height: 90vh;
+  background-color: var(--stroke);
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: column;
+  border-right: 3px solid var(--headline);
+  top: 11%;
+}
+
+.blog-nav-title {
+  font-size: 30px;
+  font-family: var(--sub-header);
+  color: var(--secondary);
+  border-bottom: 3px solid var(--headline);
 }

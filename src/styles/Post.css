@@ -2,5 +2,27 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-bottom: 2px solid var(--teritiary);
+  padding-bottom: 50px;
+}
+
+.post-title {
+  font-size: 30px;
+  font-family: var(--sub-header);
+  color: var(--headline);
+  border-bottom: 1px solid var(--headline);
+}
+
+.post-content,
+.post-footer {
+  font-family: var(--small);
+  color: var(--paragraph);
+}
+
+.post-footer {
+  font-size: 0.8rem;
+}
+
+.post-user {
+  font-weight: bold;
+  color: var(--headline);
 }

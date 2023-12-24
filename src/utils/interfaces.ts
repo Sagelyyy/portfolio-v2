@@ -8,9 +8,9 @@ export interface postInterface {
 }
 
 export interface commentInterface {
-  id: number;
+  id?: number;
   created_at: string;
   content: string;
-  post: number;
+  post?: number;
   username: string;
 }
