@@ -24,29 +24,15 @@ function Blog() {
     }
 
     async function fetchData() {
-      if (id == "latest") {
-        const { data: postData, error } = await supabase
-          .from("posts")
-          .select("*")
-          .order("created_at", { ascending: false })
-          .limit(1);
-        if (error) {
-          console.error(error);
-          setPosts(undefined);
-        } else {
-          setPosts(postData as postInterface[]);
-        }
+      const { data: postData, error } = await supabase
+        .from("posts")
+        .select()
+        .eq("id", id);
+      if (error) {
+        console.error(error);
+        setPosts(undefined);
       } else {
-        const { data: postData, error } = await supabase
-          .from("posts")
-          .select()
-          .eq("id", id);
-        if (error) {
-          console.error(error);
-          setPosts(undefined);
-        } else {
-          setPosts(postData as postInterface[]);
-        }
+        setPosts(postData as postInterface[]);
       }
     }
     fetchData();

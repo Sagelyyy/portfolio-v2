@@ -5,11 +5,11 @@
 }
 
 .dark {
-  --background: #232946;
+  --background: #282e51;
   --headline: #fffffe;
-  --paragraph: #b8c1ec;
+  --paragraph: #d0d6f3;
   --btn: #eebbc3;
-  --btn-text: #232946;
+  --btn-text: #282e51;
   --btn-hvr: #e0dadb;
   --secondary: #fffffe;
   --stroke: #121629;
@@ -18,11 +18,11 @@
 }
 
 .light {
-  --background: #fffffe;
+  --background: #f5f5f5;
   --headline: #272343;
-  --paragraph: #2d334a;
-  --btn: #b8c1ec;
-  --btn-text: #232946;
+  --paragraph: #333a51;
+  --btn: #5a7ec7;
+  --btn-text: #272343;
   --btn-hvr: #5c5b5b;
   --secondary: #e3f6f5;
   --stroke: #272343;

@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import "../styles/NavBar.css";
 import { Link } from "react-router-dom";
+import { supabase } from "../utils/supabase";
+
+type BlogLengthType = number;
 
 export function NavBar() {
+  const [blogLength, setBlogLength] = useState<BlogLengthType>();
   const [theme, setTheme] = useState<string>(() => {
     const storedTheme = localStorage.getItem("theme");
     return storedTheme ? storedTheme : "";
@@ -37,6 +41,19 @@ export function NavBar() {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   }
 
+  useEffect(() => {
+    async function getBlogLength() {
+      const { data: blogLen, error } = await supabase
+        .from("posts")
+        .select("*", { count: "exact" });
+      if (error) console.log(error);
+      console.log(blogLen?.length);
+      setBlogLength(blogLen?.length);
+    }
+
+    getBlogLength();
+  }, []);
+
   return (
     <nav className="nav-container">
       <ul className="nav-links">
@@ -44,7 +61,7 @@ export function NavBar() {
           <Link to="/">Home</Link>
         </li>
         <li className="nav-link">
-          <Link to="/blog/latest">Blog</Link>
+          <Link to={`/blog/${blogLength}`}>Blog</Link>
         </li>
         <li className="nav-link">
           <Link to="/projects">Projects</Link>
