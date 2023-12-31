@@ -45,6 +45,7 @@
 
 @media (max-width: 40em) {
   .hamburger {
+    user-select: none;
     display: block;
   }
 

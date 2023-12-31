@@ -14,6 +14,8 @@ function Landing() {
           tags={project.tags}
           mobile={project.smallImg}
           preview={project.largeImg}
+          largeAlt={project.largeAlt}
+          smallAlt={project.smallAlt}
           live={project.live}
           github={project.repo}
         />
@@ -26,6 +28,8 @@ function Landing() {
           tags={project.tags}
           mobile={project.smallImg}
           preview={project.largeImg}
+          largeAlt={project.largeAlt}
+          smallAlt={project.smallAlt}
           live={project.live}
           github={project.repo}
         />

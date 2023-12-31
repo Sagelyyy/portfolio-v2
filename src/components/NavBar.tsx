@@ -76,8 +76,9 @@ export function NavBar() {
       <span onClick={showNav} className="material-symbols-outlined hamburger">
         menu
       </span>
-      {navDisplay && (
-        <nav className="nav-container">
+
+      <nav className="nav-container">
+        {navDisplay && (
           <ul className="nav-links">
             <li className="nav-link">
               <Link to="/">Home</Link>
@@ -103,8 +104,8 @@ export function NavBar() {
               {theme === "dark" ? "🌑" : "☀️"}
             </li>
           </ul>
-        </nav>
-      )}
+        )}
+      </nav>
     </>
   );
 }

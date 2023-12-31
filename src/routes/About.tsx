@@ -19,7 +19,7 @@ function About() {
         </div>
         <img
           className="about-img"
-          src="src/assets/images/chris.jpg"
+          src="https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/chris.jpg"
           alt="The developer Chris Weiskopf smiling at the camera"
         />
       </div>

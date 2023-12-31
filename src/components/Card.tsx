@@ -7,6 +7,8 @@ interface CardInterface {
   content: string;
   mobile: string;
   preview: string;
+  largeAlt: string;
+  smallAlt: string;
   reversed: boolean;
   github: string;
   live: string;
@@ -18,6 +20,8 @@ function Card({
   content,
   mobile,
   preview,
+  largeAlt,
+  smallAlt,
   reversed,
   github,
   live,
@@ -81,8 +85,8 @@ function Card({
         </div>
       </div>
       <div className={reversed ? "card-images row-reverse" : "card-images"}>
-        <img src={preview} alt="preview of Test Card" />
-        <img src={mobile} alt="preview of mobile card" />
+        <img src={preview} alt={largeAlt} />
+        <img src={mobile} alt={smallAlt} />
       </div>{" "}
     </div>
   );

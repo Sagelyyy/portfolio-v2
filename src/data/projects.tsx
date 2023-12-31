@@ -8,9 +8,11 @@ export const projects = [
     I showcased my adeptness not only in Typescript's core features like interfaces and types 
     but also in handling React events seamlessly.`,
     tags: ["react", "typescript"],
-    largeImg: "/assets/images/todoLarge.png",
+    largeImg:
+      "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/todoLarge.png?t=2023-12-31T02%3A46%3A23.095Z",
     largeAlt: "a large image of the website",
-    smallImg: "/assets/images/todoSmall.png",
+    smallImg:
+      "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/todoSmall.png?t=2023-12-31T02%3A46%3A07.134Z",
     smallAlt: "a mobile view of the website",
     live: "https://ez-todo.netlify.app/",
     repo: "https://github.com/Sagelyyy/typescript-todo",
@@ -30,9 +32,11 @@ export const projects = [
       "PostgresSQL",
       "Netlify",
     ],
-    largeImg: "/assets/images/kindnessLarge.png",
+    largeImg:
+      "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/kindnessLarge.png?t=2023-12-31T02%3A46%3A39.869Z",
     largeAlt: "a large image of the website",
-    smallImg: "/assets/images/kindnessSmall.png",
+    smallImg:
+      "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/kindnessSmall.png?t=2023-12-31T02%3A46%3A32.201Z",
     smallAlt: "a mobile view of the website",
     live: "https://do-good.netlify.app/",
     repo: "https://github.com/Sagelyyy/Kindness-server",
@@ -45,9 +49,11 @@ export const projects = [
     Its purpose is for learning and displaying the skills I have learned throughout the course. 
     It is the final project in the Javascript course.`,
     tags: ["React", "Firebase", "Responsive Design", "Restful APIs"],
-    largeImg: "/assets/images/holoLarge.png",
+    largeImg:
+      "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/holoLarge.png?t=2023-12-31T02%3A46%3A55.833Z",
     largeAlt: "a large image of the website",
-    smallImg: "/assets/images/holoSmall.png",
+    smallImg:
+      "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/holoSmall.png?t=2023-12-31T02%3A46%3A48.152Z",
     smallAlt: "a mobile view of the website",
     live: "https://sagelyyy.github.io/holoscript/",
     repo: "https://github.com/Sagelyyy/holoscript",

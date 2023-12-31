@@ -52,7 +52,8 @@ body {
 }
 
 section {
-  padding: 7em;
+  /* padding: 7em; */
+  padding: clamp(0, 7em, 8em);
   display: flex;
   justify-content: center;
   color: var(--paragraph);
