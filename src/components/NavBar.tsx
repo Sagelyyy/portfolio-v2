@@ -6,7 +6,7 @@ import { supabase } from "../utils/supabase";
 type BlogLengthType = number;
 
 export function NavBar() {
-  const [navDisplay, setNavDisplay] = useState(false);
+  const [navDisplay, setNavDisplay] = useState(true);
   const [blogLength, setBlogLength] = useState<BlogLengthType>();
   const [theme, setTheme] = useState<string>(() => {
     const storedTheme = localStorage.getItem("theme");
