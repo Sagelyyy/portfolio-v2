@@ -66,9 +66,9 @@ function Blog() {
       <div className="blog-items">
         <BlogNav />
         {postElems && postElems}
-        {comments?.length > 0 && (
+        {comments && comments?.length > 0 ? (
           <div className="comments-container"> {commentElems}</div>
-        )}
+        ) : null}
       </div>
     </section>
   );

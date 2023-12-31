@@ -6,6 +6,7 @@ import { supabase } from "../utils/supabase";
 type BlogLengthType = number;
 
 export function NavBar() {
+  const [navDisplay, setNavDisplay] = useState(false);
   const [blogLength, setBlogLength] = useState<BlogLengthType>();
   const [theme, setTheme] = useState<string>(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -24,6 +25,19 @@ export function NavBar() {
     } else {
       setTheme(storedTheme);
     }
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 40 * 16) {
+        setNavDisplay(true);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   useEffect(() => {
@@ -47,41 +61,51 @@ export function NavBar() {
         .from("posts")
         .select("*", { count: "exact" });
       if (error) console.log(error);
-      console.log(blogLen?.length);
       setBlogLength(blogLen?.length);
     }
 
     getBlogLength();
   }, []);
 
+  function showNav() {
+    setNavDisplay(!navDisplay);
+  }
+
   return (
-    <nav className="nav-container">
-      <ul className="nav-links">
-        <li className="nav-link">
-          <Link to="/">Home</Link>
-        </li>
-        <li className="nav-link">
-          <Link to={`/blog/${blogLength}`}>Blog</Link>
-        </li>
-        <li className="nav-link">
-          <Link to="/projects">Projects</Link>
-        </li>
-        <li className="nav-link">
-          <Link to="/about">About</Link>
-        </li>
-        <li className="nav-link">
-          <Link to="/resume">Resume</Link>
-        </li>
-        <li
-          className="nav-theme"
-          onClick={() => {
-            toggleTheme();
-          }}
-        >
-          {theme === "dark" ? "🌑" : "☀️"}
-        </li>
-      </ul>
-    </nav>
+    <>
+      <span onClick={showNav} className="material-symbols-outlined hamburger">
+        menu
+      </span>
+      {navDisplay && (
+        <nav className="nav-container">
+          <ul className="nav-links">
+            <li className="nav-link">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="nav-link">
+              <Link to={`/blog/${blogLength}`}>Blog</Link>
+            </li>
+            <li className="nav-link">
+              <Link to="/projects">Projects</Link>
+            </li>
+            <li className="nav-link">
+              <Link to="/about">About</Link>
+            </li>
+            <li className="nav-link">
+              <Link to="/resume">Resume</Link>
+            </li>
+            <li
+              className="nav-theme"
+              onClick={() => {
+                toggleTheme();
+              }}
+            >
+              {theme === "dark" ? "🌑" : "☀️"}
+            </li>
+          </ul>
+        </nav>
+      )}
+    </>
   );
 }
 

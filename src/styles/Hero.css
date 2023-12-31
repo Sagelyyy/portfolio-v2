@@ -14,7 +14,7 @@
 
 .hero-title {
   color: var(--teritiary);
-  font-size: 5rem;
+  font-size: var(--fs-xl);
   letter-spacing: 0.4rem;
   font-family: var(--header);
   margin-bottom: 0;

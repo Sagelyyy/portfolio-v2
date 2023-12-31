@@ -29,17 +29,28 @@ function Card({
   const ref = useRef<RefType>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setInter(entry.isIntersecting);
-      },
-      { rootMargin: "-25px" }
-    );
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    if (window.screen.width > 320) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setInter(entry.isIntersecting);
+        },
+        { rootMargin: "-25px" }
+      );
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
 
-    return () => observer.disconnect();
+      return () => observer.disconnect();
+    } else {
+      const observer = new IntersectionObserver(([entry]) => {
+        setInter(entry.isIntersecting);
+      });
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+
+      return () => observer.disconnect();
+    }
   });
 
   useEffect(() => {

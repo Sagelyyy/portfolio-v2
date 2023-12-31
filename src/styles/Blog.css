@@ -1,17 +1,10 @@
 .blog-container {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 1rem 0;
+  display: block;
+  padding: 0;
+  height: 86vh;
 }
+
 .blog-nav {
-  position: fixed;
-  left: 0;
-  height: 90vh;
   background-color: var(--stroke);
   padding: 0px 30px;
   display: flex;
@@ -25,4 +18,20 @@
   font-family: var(--sub-header);
   color: var(--secondary);
   border-bottom: 3px solid var(--headline);
+}
+
+.blog-items {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "blogNav post comments"
+    "blogNav post comments"
+    "blogNav post comments";
+  height: 100%;
+}
+
+.blog-nav {
+  grid-area: blogNav;
 }

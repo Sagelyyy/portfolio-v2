@@ -2,6 +2,17 @@
   --sub-header: "Fira Sans", sans-serif;
   --small: "Prompt", sans-serif;
   --header: "Roboto", sans-serif;
+
+  --fs-xl: clamp(1.3rem, 5vw + 1rem, 5rem);
+  --fs-600: 2rem;
+  --fs-400: 1rem;
+}
+
+@media (min-width: 40em) {
+  :root {
+    --fs-600: 3rem;
+    --fs-400: 1.125rem;
+  }
 }
 
 .dark {

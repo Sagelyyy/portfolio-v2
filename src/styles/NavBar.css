@@ -1,4 +1,5 @@
 .navigation {
+  width: 100%;
   position: sticky;
   top: 0;
   padding: 0;
@@ -10,7 +11,7 @@
 .nav-container {
   width: 100%;
   font-family: var(--header);
-  font-size: 1.3rem;
+  font-size: var(--fs-400);
   flex-shrink: 0;
 }
 
@@ -30,4 +31,28 @@
   padding: 10px;
   font-size: 2rem;
   cursor: pointer;
+}
+
+.hamburger {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  font-size: var(--fs-600);
+  display: none;
+  cursor: pointer;
+  color: var(--paragraph);
+}
+
+@media (max-width: 40em) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .navigation {
+    border: none;
+  }
 }

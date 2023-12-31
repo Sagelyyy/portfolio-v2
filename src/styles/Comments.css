@@ -1,13 +1,9 @@
 .comments-container {
-  position: fixed;
-  right: 0;
-  height: 90vh;
   background-color: var(--stroke);
   padding: 0px 30px;
   display: flex;
   flex-direction: column;
   border-left: 3px solid var(--headline);
-  top: 11%;
   color: rgb(202, 188, 188);
 }
 
@@ -23,4 +19,8 @@
 
 .comment-time {
   font-size: 0.8rem;
+}
+
+.comments-container {
+  grid-area: comments;
 }

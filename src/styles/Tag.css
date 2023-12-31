@@ -2,7 +2,8 @@
   border: 2px solid black;
   padding: 5px 12px;
   border-radius: 12px;
-  font-size: small;
+  font-size: var(--fs-small);
+  width: clamp(50px, fit-content, 300px);
 }
 
 .language-tag {
