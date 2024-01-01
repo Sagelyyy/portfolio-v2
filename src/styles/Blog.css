@@ -1,7 +1,8 @@
 .blog-container {
   display: block;
   padding: 0;
-  height: 86vh;
+  min-height: 86vh;
+  padding-bottom: 50px;
 }
 
 .blog-nav {
