@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../utils/supabase";
 import { Link } from "react-router-dom";
+import dompurify from "dompurify";
 
 interface titleInterface {
   title: string;
@@ -31,9 +32,14 @@ function BlogNav() {
         {" "}
         {blog.title}
       </Link>
-      <p className="blog-nav-summary">
-        {blog.content.substring(0, blog.content.lastIndexOf(" ", 300))}
-      </p>
+      <p
+        className="blog-nav-summary"
+        dangerouslySetInnerHTML={{
+          __html: dompurify.sanitize(
+            blog.content.substring(0, blog.content.lastIndexOf(" ", 300))
+          ),
+        }}
+      />
     </div>
   ));
 
