@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 interface titleInterface {
   title: string;
   id: number;
+  content: string;
 }
 
 function BlogNav() {
@@ -12,7 +13,10 @@ function BlogNav() {
 
   useEffect(() => {
     async function queryBlogs() {
-      const { data, error } = await supabase.from("posts").select("title, id");
+      const { data, error } = await supabase
+        .from("posts")
+        .select("title, id, content, created_at")
+        .order("created_at", { ascending: false });
       if (error) {
         console.log(error);
       }
@@ -22,18 +26,18 @@ function BlogNav() {
   }, []);
 
   const blogLinks = blogPosts?.map((blog) => (
-    <Link className="blog-nav-link" key={blog.id} to={`/blog/${blog.id}`}>
-      {" "}
-      {blog.title}
-    </Link>
+    <div className="blog-nav-link-wrapper" key={blog.id}>
+      <Link className="blog-nav-link" to={`/blog/${blog.id}`}>
+        {" "}
+        {blog.title}
+      </Link>
+      <p className="blog-nav-summary">
+        {blog.content.substring(0, blog.content.lastIndexOf(" ", 300))}
+      </p>
+    </div>
   ));
 
-  return (
-    <div className="blog-nav">
-      <h3 className="blog-nav-title">Blog Posts:</h3>
-      {blogLinks}
-    </div>
-  );
+  return <div className="blog-nav">{blogLinks}</div>;
 }
 
 export default BlogNav;

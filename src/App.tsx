@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Projects from "./routes/Projects";
 import Resume from "./routes/Resume";
 import Footer from "./components/Footer";
+import BlogNav from "./components/BlogNav";
 import Blog from "./routes/Blog";
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       </section>
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/blogs" element={<BlogNav />} />
         <Route path="/blog/:id" element={<Blog />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
