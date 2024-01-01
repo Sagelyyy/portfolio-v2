@@ -1,0 +1,7 @@
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0 auto;
+  width: clamp(300px, 80vw, 80vw);
+}

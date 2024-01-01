@@ -9,6 +9,8 @@ import Resume from "./routes/Resume";
 import Footer from "./components/Footer";
 import BlogNav from "./components/BlogNav";
 import Blog from "./routes/Blog";
+import PostForm from "./routes/PostForm";
+import Login from "./routes/Login";
 function App() {
   return (
     <div className="app-wrapper">
@@ -22,6 +24,8 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/post" element={<PostForm />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </div>

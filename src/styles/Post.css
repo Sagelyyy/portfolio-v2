@@ -1,6 +1,8 @@
 .post-container {
   padding: 20px 50px;
   overflow-y: auto;
+  margin: 0 auto;
+  width: clamp(300px, 60vw, 60vw);
 }
 
 .post-title {
@@ -24,8 +26,4 @@
 .post-user {
   font-weight: bold;
   color: var(--headline);
-}
-
-.post-container {
-  grid-area: post;
 }

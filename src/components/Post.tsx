@@ -1,5 +1,6 @@
 import { postInterface } from "../utils/interfaces";
 import { DateTime } from "luxon";
+import dompurify from "dompurify";
 import "../styles/Post.css";
 
 function Post({ id, title, content, user, created_at }: postInterface) {
@@ -13,7 +14,12 @@ function Post({ id, title, content, user, created_at }: postInterface) {
         Published by <span className="post-user">{user}</span> at{" "}
         {formattedDate}
       </p>
-      <p className="post-content">{content}</p>
+      <p
+        className="post-content"
+        dangerouslySetInnerHTML={{
+          __html: dompurify.sanitize(content, { FORCE_BODY: true }),
+        }}
+      />
     </div>
   );
 }

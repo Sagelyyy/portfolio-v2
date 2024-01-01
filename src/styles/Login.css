@@ -1,0 +1,20 @@
+.login-container {
+  margin: 150px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--headline);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.login-container > h6 {
+  font-size: var(--fs-400);
+  margin: 0;
+}
+
+.login-container > input {
+  border: none;
+  color: var(--paragraph);
+  background-color: var(--stroke);
+}
