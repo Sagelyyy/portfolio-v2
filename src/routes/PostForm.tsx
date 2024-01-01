@@ -1,6 +1,6 @@
 import "../styles/PostForm.css";
 import { Editor } from "@tinymce/tinymce-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { supabase } from "../utils/supabase";
 
 interface postContentInterface {
@@ -14,10 +14,6 @@ function PostForm() {
   const [postContent, setPostContent] = useState<
     postContentInterface | undefined
   >();
-
-  useEffect(() => {
-    console.log(postContent);
-  }, [postContent]);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const { value } = e.target;

@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { supabase } from "../utils/supabase";
 import "../styles/Login.css";
 
 function Login() {
   const [user, setUser] = useState({ email: "", password: "", phone: "" });
-
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = e.target;
