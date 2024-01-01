@@ -43,7 +43,7 @@ function PostForm() {
         onChange={(e) => handleChange(e)}
       />
       <Editor
-        apiKey="h5l5nfe2gpny11zndg9m5f6pyuhq8497lr85e3f36ox7c27t"
+        apiKey={import.meta.env.VITE_TINY_KEY}
         onEditorChange={(newValue) =>
           setPostContent((prevPostContent) => {
             if (!prevPostContent) {
