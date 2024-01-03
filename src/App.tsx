@@ -7,7 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Projects from "./routes/Projects";
 import Resume from "./routes/Resume";
 import Footer from "./components/Footer";
-import BlogNav from "./components/BlogNav";
+import BlogNav from "./routes/BlogNav";
 import Blog from "./routes/Blog";
 import PostForm from "./routes/PostForm";
 import Login from "./routes/Login";

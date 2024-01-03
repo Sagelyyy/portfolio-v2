@@ -1,50 +1,34 @@
 .tile {
-  width: 800px;
-  height: 300px;
-  perspective: 1000px;
-  padding: 10px;
-}
+  margin: 50px;
 
-.flip {
   position: relative;
+  overflow: hidden;
+}
+
+#tile-img {
+  object-fit: cover;
   width: 100%;
   height: 100%;
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
+  transition: all 0.3s ease-in-out;
 }
 
-.tile:hover .flip {
-  cursor: pointer;
-  transform: rotateY(180deg);
+.tile:hover > #tile-img {
+  transform: scale(1.2);
 }
 
-.front,
-.back {
+.tile-info-container {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.front {
-  content: "";
-  color: white;
-}
-
-.back {
-  background: black;
-  color: white;
-  transform: rotateY(180deg);
-  border-radius: 25px;
+  left: 0;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-#tile-img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
-  border-radius: 25px;
+  color: black;
+}
+
+.tile:hover > .tile-info-container {
+  display: flex;
 }
