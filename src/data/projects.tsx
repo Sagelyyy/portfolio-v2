@@ -10,10 +10,13 @@ export const projects = [
     tags: ["react", "typescript"],
     largeImg:
       "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/todoLarge.png?t=2023-12-31T02%3A46%3A23.095Z",
-    largeAlt: "a large image of the website",
+    largeAlt: "a large image of the easy todo website",
     smallImg:
       "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/todoSmall.png?t=2023-12-31T02%3A46%3A07.134Z",
-    smallAlt: "a mobile view of the website",
+    smallAlt: "a mobile view of the easy todo website",
+    fullImg:
+      "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/todoFull.png?t=2024-01-06T12%3A51%3A19.348Z",
+    fullAlt: "a full view of the easy todo website",
     live: "https://ez-todo.netlify.app/",
     repo: "https://github.com/Sagelyyy/typescript-todo",
     id: nanoid(),
@@ -34,10 +37,13 @@ export const projects = [
     ],
     largeImg:
       "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/kindnessLarge.png?t=2023-12-31T02%3A46%3A39.869Z",
-    largeAlt: "a large image of the website",
+    largeAlt: "a large image of the kindness website",
     smallImg:
       "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/kindnessSmall.png?t=2023-12-31T02%3A46%3A32.201Z",
-    smallAlt: "a mobile view of the website",
+    smallAlt: "a mobile view of the kindness website",
+    fullImg:
+      "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/beKindFull.png?t=2024-01-06T12%3A49%3A57.550Z",
+    fullAlt: "a full view of the kindness website",
     live: "https://do-good.netlify.app/",
     repo: "https://github.com/Sagelyyy/Kindness-server",
     id: nanoid(),
@@ -51,10 +57,13 @@ export const projects = [
     tags: ["React", "Firebase", "Responsive Design", "Restful APIs"],
     largeImg:
       "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/holoLarge.png?t=2023-12-31T02%3A46%3A55.833Z",
-    largeAlt: "a large image of the website",
+    largeAlt: "a large image of the holoscript website",
     smallImg:
       "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/holoSmall.png?t=2023-12-31T02%3A46%3A48.152Z",
-    smallAlt: "a mobile view of the website",
+    smallAlt: "a mobile view of the holoscript website",
+    fullImg:
+      "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/holoFull.png?t=2024-01-06T12%3A50%3A45.237Z",
+    fullAlt: "a full view of the holoscript website",
     live: "https://sagelyyy.github.io/holoscript/",
     repo: "https://github.com/Sagelyyy/holoscript",
     id: nanoid(),

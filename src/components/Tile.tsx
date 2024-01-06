@@ -12,6 +12,7 @@ function Tile({ title, img, alt, github, live }: TileInterface) {
   return (
     <div className="tile">
       <img src={img} alt={alt} id="tile-img" />
+      <div className="tile-overlay"></div>
       <div className="tile-info-container">
         <h3 className="tile-title">{title}</h3>
         <a href={github} target="_blank">
