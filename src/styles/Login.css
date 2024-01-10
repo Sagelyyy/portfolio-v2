@@ -1,20 +1,49 @@
 .login-container {
-  margin: 150px auto;
+  margin: 50px auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   background-color: var(--headline);
   padding: 30px;
   border-radius: 10px;
+  width: clamp(300px, 400px, 400px);
 }
 
 .login-container > h6 {
-  font-size: var(--fs-400);
+  font-size: var(--fs-600);
+  color: var(--input);
   margin: 0;
 }
 
 .login-container > input {
   border: none;
+  padding-left: 10px;
   color: var(--paragraph);
-  background-color: var(--stroke);
+  background-color: var(--input);
+  height: 25px;
+  border-radius: 100vw;
+}
+
+button[type="submit"] {
+  cursor: pointer;
+  align-self: center;
+  width: 150px;
+  height: 50px;
+  background-color: var(--background);
+  color: var(--headline);
+  border: none;
+  border-radius: 10px;
+}
+
+.toast-container {
+  margin: 25px auto;
+  background-color: #5cb85c;
+  border-radius: 100vw;
+  color: #0f1f0f;
+  padding: 10px 20px;
+}
+
+.error {
+  background-color: rgb(190, 107, 107) !important;
+  color: rgb(59, 13, 13) !important;
 }
