@@ -24,17 +24,18 @@ export function NavBar() {
   }, []);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 40 * 16) {
-        setNavDisplay(true);
-      } else {
-        setNavDisplay(false);
-      }
+    const mediaQuery = window.matchMedia("(min-width: 40em)");
+
+    setNavDisplay(mediaQuery.matches);
+
+    const handleMediaQueryChange = (event: MediaQueryListEvent) => {
+      setNavDisplay(event.matches);
     };
-    window.addEventListener("resize", handleResize);
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
 
