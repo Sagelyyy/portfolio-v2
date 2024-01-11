@@ -52,7 +52,11 @@ export function NavBar() {
   }
 
   function showNav() {
-    setNavDisplay(!navDisplay);
+    if (window.innerWidth >= 40 * 16) {
+      setNavDisplay(true);
+    } else {
+      setNavDisplay(!navDisplay);
+    }
   }
 
   return (
