@@ -47,6 +47,7 @@
   .hamburger {
     user-select: none;
     display: block;
+    z-index: 1000;
   }
 
   .nav-links {
@@ -55,5 +56,11 @@
 
   .navigation {
     border: none;
+  }
+
+  .nav-container {
+    position: absolute;
+    background-color: var(--background);
+    border-bottom: 2px solid var(--stroke);
   }
 }

@@ -57,7 +57,10 @@ export function NavBar() {
 
   return (
     <>
-      <span onClick={showNav} className="material-symbols-outlined hamburger">
+      <span
+        onClick={() => showNav()}
+        className="material-symbols-outlined hamburger"
+      >
         menu
       </span>
 
@@ -65,19 +68,29 @@ export function NavBar() {
         {navDisplay && (
           <ul className="nav-links">
             <li className="nav-link">
-              <Link to="/">Home</Link>
+              <Link onClick={() => showNav()} to="/">
+                Home
+              </Link>
             </li>
             <li className="nav-link">
-              <Link to={`/blogs`}>Blog</Link>
+              <Link onClick={() => showNav()} to={`/blogs`}>
+                Blog
+              </Link>
             </li>
             <li className="nav-link">
-              <Link to="/projects">Projects</Link>
+              <Link onClick={() => showNav()} to="/projects">
+                Projects
+              </Link>
             </li>
             <li className="nav-link">
-              <Link to="/about">About</Link>
+              <Link onClick={() => showNav()} to="/about">
+                About
+              </Link>
             </li>
             <li className="nav-link">
-              <Link to="/resume">Resume</Link>
+              <Link onClick={() => showNav()} to="/resume">
+                Resume
+              </Link>
             </li>
             <li
               className="nav-theme"
@@ -85,7 +98,7 @@ export function NavBar() {
                 toggleTheme();
               }}
             >
-              {theme === "dark" ? "🌑" : "☀️"}
+              {theme === "dark" ? "☀️" : "🌑"}
             </li>
           </ul>
         )}

@@ -18,6 +18,10 @@
   overflow-y: auto;
 }
 
+.post-content {
+  font-size: var(--fs-400);
+}
+
 .post-footer {
   font-size: 0.8rem;
 }
@@ -25,4 +29,12 @@
 .post-user {
   font-weight: bold;
   color: var(--headline);
+}
+
+@media (max-width: 40em) {
+  .post-container {
+    padding: 0;
+    margin-bottom: 100px;
+    width: clamp(150px, 300px + 1em, 300px);
+  }
 }

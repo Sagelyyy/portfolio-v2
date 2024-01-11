@@ -7,20 +7,10 @@ import { useParams } from "react-router-dom";
 
 function Blog() {
   const [posts, setPosts] = useState<postInterface[] | undefined>();
-  // const [comments, setComments] = useState<commentInterface[] | undefined>();
 
   const { id } = useParams();
 
   useEffect(() => {
-    // async function fetchComments() {
-    //   const { data: commentData, error } = await supabase
-    //     .from("comments")
-    //     .select()
-    //     .eq("post", id);
-    //   if (error) console.log(error);
-    //   setComments(commentData as commentInterface[]);
-    // }
-
     async function fetchData() {
       const { data: postData, error } = await supabase
         .from("posts")
@@ -34,7 +24,6 @@ function Blog() {
       }
     }
     fetchData();
-    // fetchComments();
   }, [id]);
 
   const postElem = posts?.map((post) => (
@@ -48,16 +37,6 @@ function Blog() {
       created_at={post.created_at}
     />
   ));
-
-  // const commentElems = comments?.map((comment) => (
-  //   <Comments
-  //     key={comment.id}
-  //     created_at={comment.created_at}
-  //     content={comment.content}
-  //     username={comment.username}
-  //     post={comment.post}
-  //   />
-  // ));
 
   return (
     <section className="blog-container">

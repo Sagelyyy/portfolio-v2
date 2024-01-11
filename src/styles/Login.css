@@ -47,3 +47,9 @@ button[type="submit"] {
   background-color: rgb(190, 107, 107) !important;
   color: rgb(59, 13, 13) !important;
 }
+
+@media (max-width: 40em) {
+  .login-container {
+    width: clamp(150px, 200px + 1rem, 200px);
+  }
+}
