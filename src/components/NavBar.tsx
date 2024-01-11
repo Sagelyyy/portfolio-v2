@@ -27,6 +27,8 @@ export function NavBar() {
     const handleResize = () => {
       if (window.innerWidth >= 40 * 16) {
         setNavDisplay(true);
+      } else {
+        setNavDisplay(false);
       }
     };
     window.addEventListener("resize", handleResize);
