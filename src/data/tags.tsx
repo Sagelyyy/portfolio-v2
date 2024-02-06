@@ -47,6 +47,11 @@ export const tags = [
     id: nanoid(),
   },
   {
+    name: "TailwindCSS",
+    type: "library/framework",
+    id: nanoid(),
+  },
+  {
     name: "Javascript",
     type: "language",
     id: nanoid(),

@@ -2,6 +2,28 @@ import { nanoid } from "nanoid";
 
 export const projects = [
   {
+    title: "Coffee Diff",
+    description: `My primary focus for this website was delving into  Tailwind CSS. While I incorporated TypeScript as an additional layer, the core 
+    essence of the project revolved around mastering the nuances of Tailwind. This exploration
+     allowed me to gain hands-on experience in leveraging Tailwind's mobile-first methodology 
+     to create a visually captivating and responsive landing page for a business. The journey 
+     not only refined my understanding of Tailwind but also provided valuable insights into 
+     the art of crafting seamless and aesthetically pleasing web experiences.`,
+    tags: ["react", "typescript", "tailwindcss"],
+    largeImg:
+      "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/coffee-large.png?t=2024-02-06T04%3A51%3A57.348Z",
+    largeAlt: "a large image of the coffee diff website",
+    smallImg:
+      "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/coffee-small.png?t=2024-02-06T04%3A52%3A06.808Z",
+    smallAlt: "a mobile view of the coffee diff website",
+    fullImg:
+      "https://edeafcyjsgyuuvzwlgar.supabase.co/storage/v1/object/public/images/coffee-diff-full.png?t=2024-02-06T04%3A44%3A44.478Z",
+    fullAlt: "a full view of the coffee diff website",
+    live: "https://coffee-diff-f85362.netlify.app/",
+    repo: "https://github.com/Sagelyyy/coffee-landing",
+    id: nanoid(),
+  },
+  {
     title: "Easy Todo",
     description: `In this Typescript project, I delved into building a basic todo 
     app using React while emphasizing the integration of Typescript's strong typing system. 
