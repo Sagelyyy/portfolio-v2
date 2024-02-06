@@ -16,7 +16,7 @@ function PostForm() {
     postContentInterface | undefined
   >();
 
-  const [userAccount, setUserAccount] = useContext(UserContext);
+  const [userAccount] = useContext(UserContext);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const { value } = e.target;

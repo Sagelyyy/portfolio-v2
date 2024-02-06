@@ -10,7 +10,7 @@ export function NavBar() {
     return storedTheme ? storedTheme : "";
   });
 
-  const [user, setUser] = useContext(UserContext);
+  const [user] = useContext(UserContext);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
