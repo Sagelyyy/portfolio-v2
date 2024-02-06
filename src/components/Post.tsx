@@ -2,8 +2,14 @@ import { postInterface } from "../utils/interfaces";
 import { DateTime } from "luxon";
 import dompurify from "dompurify";
 import "../styles/Post.css";
+import { useContext } from "react";
+import { UserContext } from "../App";
 
 function Post({ id, title, content, user, created_at }: postInterface) {
+  const [userAccount, setUserAccount] = useContext(UserContext);
+
+  // TODO: Setup the ability to edit posts
+
   const formattedDate =
     DateTime.fromISO(created_at).toFormat("MM/dd/yyyy hh:mm a");
 

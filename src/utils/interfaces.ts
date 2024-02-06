@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface postInterface {
   id: number;
   created_at: string;
@@ -14,3 +16,13 @@ export interface commentInterface {
   post?: number;
   username: string;
 }
+
+export interface UserInterface {
+  email: string | undefined;
+  username: string | undefined;
+}
+
+export type UserContextType = [
+  UserInterface,
+  Dispatch<SetStateAction<UserInterface>>
+];

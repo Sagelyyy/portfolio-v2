@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "../styles/NavBar.css";
 import { Link } from "react-router-dom";
+import { UserContext } from "../App";
 
 export function NavBar() {
   const [navDisplay, setNavDisplay] = useState(true);
@@ -8,6 +9,8 @@ export function NavBar() {
     const storedTheme = localStorage.getItem("theme");
     return storedTheme ? storedTheme : "";
   });
+
+  const [user, setUser] = useContext(UserContext);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -99,6 +102,14 @@ export function NavBar() {
                 Resume
               </Link>
             </li>
+            {user.email && (
+              <li className="nav-link">
+                <Link onClick={() => showNav()} to="/post">
+                  New Post
+                </Link>
+              </li>
+            )}
+
             <li
               className="nav-theme"
               onClick={() => {

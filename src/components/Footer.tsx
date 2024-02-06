@@ -1,7 +1,7 @@
 import "../styles/Footer.css";
 
 function Footer() {
-  let year = new Date().getFullYear();
+  const year = new Date().getFullYear();
 
   return (
     <section className="footer-container">

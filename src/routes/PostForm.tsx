@@ -1,19 +1,22 @@
 import "../styles/PostForm.css";
 import { Editor } from "@tinymce/tinymce-react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { supabase } from "../utils/supabase";
+import { UserContext } from "../App";
 
 interface postContentInterface {
   title: string;
   content: string;
   isPublished: boolean;
-  user: string;
+  user: string | undefined;
 }
 
 function PostForm() {
   const [postContent, setPostContent] = useState<
     postContentInterface | undefined
   >();
+
+  const [userAccount, setUserAccount] = useContext(UserContext);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const { value } = e.target;
@@ -23,7 +26,7 @@ function PostForm() {
           title: value,
           content: "",
           isPublished: false,
-          user: "",
+          user: userAccount.username,
         };
       }
       return { ...old, title: value };
