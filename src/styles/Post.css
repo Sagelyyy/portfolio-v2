@@ -19,6 +19,25 @@
 }
 
 .post-content {
+  & img {
+    max-width: 100%;
+  }
+  & code {
+    background-color: color-mix(in srgb, #3f3f3f 20%, black);
+    border: 2px dotted gray;
+    padding: 10px;
+    display: inline-block;
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+  & h3 {
+    text-decoration: underline;
+  }
+}
+
+.post-content {
   font-size: var(--fs-400);
 }
 
