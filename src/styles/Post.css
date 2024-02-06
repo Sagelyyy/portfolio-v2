@@ -53,6 +53,7 @@
 .post-user {
   font-weight: bold;
   color: var(--headline);
+  text-transform: capitalize;
 }
 
 @media (max-width: 40em) {
