@@ -1,6 +1,8 @@
 import "../styles/Footer.css";
 
 function Footer() {
+  let year = new Date().getFullYear();
+
   return (
     <section className="footer-container">
       <ul>
@@ -17,7 +19,7 @@ function Footer() {
         <li>
           <a href="mailto:chris@chriscancode.io">Contact Me</a>
         </li>
-        <li>© 2023 Christian Weiskopf</li>
+        <li>© {year} Christian Weiskopf</li>
       </ul>
     </section>
   );
