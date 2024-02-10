@@ -1,9 +1,8 @@
 .tile-container {
   display: flex;
   flex-flow: row wrap;
-  margin-bottom: 50px;
   gap: 25px;
-  margin: 25px auto;
+  margin: 150px auto;
 }
 
 .tile {

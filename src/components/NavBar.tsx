@@ -97,11 +97,6 @@ export function NavBar() {
                 About
               </Link>
             </li>
-            <li className="nav-link">
-              <Link onClick={() => showNav()} to="/resume">
-                Resume
-              </Link>
-            </li>
             {user.email && (
               <li className="nav-link">
                 <Link onClick={() => showNav()} to="/post">

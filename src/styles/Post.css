@@ -20,6 +20,7 @@
 
 .post-content {
   & img {
+    height: auto;
     max-width: 100%;
   }
   & code {
@@ -29,8 +30,6 @@
     display: inline-block;
     max-width: 100%;
     white-space: normal;
-    word-break: break-all;
-    word-wrap: break-word;
   }
   & h3 {
     text-decoration: underline;
