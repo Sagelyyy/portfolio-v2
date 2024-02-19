@@ -23,14 +23,14 @@
     height: auto;
     max-width: 100%;
   }
-  & code {
-    background-color: color-mix(in srgb, #3f3f3f 20%, black);
-    border: 2px dotted gray;
-    padding: 10px;
-    display: inline-block;
-    max-width: 100%;
-    white-space: normal;
+  & .token.operator {
+    background: none;
   }
+
+  &.tag {
+    border: none;
+  }
+
   & h3 {
     text-decoration: underline;
   }
